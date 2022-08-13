@@ -1,0 +1,38 @@
+@font-face {
+  font-family: pokemonGB;
+  src: url('./PokemonGb-RAeo.ttf')
+}
+
+.pokemon-modal-container {
+  box-sizing: border-box;
+  font-family: pokemonGB;
+  font-size: 10px;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top: auto;
+  margin-bottom:auto;
+  width:100%;
+  height:100%;
+  background-color: white;
+}
+
+.pokemon-modal-info {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.box {
+  height: 100vh;
+  background-color: grey;
+  transition: background .25s ease;
+  z-index: 999;
+}
+
+button {
+  font-family: pokemonGB;
+  font-size: 10px;
+}

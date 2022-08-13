@@ -1,0 +1,34 @@
+@font-face {
+  font-family: pokemonGB;
+  src: url('./PokemonGb-RAeo.ttf')
+}
+
+.pokemon-gen-container {
+  font-family: pokemonGB;
+  font-size: 8px;
+  height: auto;
+  max-height: 600px;
+  overflow-y: scroll;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+
+}
+
+
+.pokedex-image {
+  background: url('./pokedex.png');
+  background-repeat: no-repeat;
+}
+.gen-title {
+  margin-top: 2%;
+}
+
+.pokemon-list-options {
+  margin-bottom: 2px;
+}
+
+.form {
+  display: inline-block;
+}

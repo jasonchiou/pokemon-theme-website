@@ -1,0 +1,16 @@
+figure {
+  display: inline-block;
+}
+
+.pokecard-container{
+  font-family: pokemonGB;
+  font-size: 8px;
+  margin-right:5px;
+  margin-left: 5px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.pokemon-name {
+  margin-bottom: 4px;
+}
