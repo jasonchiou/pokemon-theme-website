@@ -1,0 +1,11 @@
+.pokedex-container {
+  float: right;
+  width: 50%;
+}
+
+.pokemon-details {
+  text-align: left;
+  width: 50%;
+  float: right;
+  margin-top: 20%;
+}

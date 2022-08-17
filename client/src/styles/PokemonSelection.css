@@ -3,32 +3,67 @@
   src: url('./PokemonGb-RAeo.ttf')
 }
 
-.pokemon-gen-container {
-  font-family: pokemonGB;
-  font-size: 8px;
-  height: auto;
-  max-height: 600px;
-  overflow-y: scroll;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid black;
-
-}
-
-
-.pokedex-image {
-  background: url('./pokedex.png');
-  background-repeat: no-repeat;
-}
-.gen-title {
-  margin-top: 2%;
-}
 
 .pokemon-list-options {
   margin-bottom: 2px;
+  display: inline-block;
 }
 
-.form {
+
+.pokedex-background {
+  background: url('./pokedex.png');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  /* margin-left: 25%; */
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+  position: absolute;
+
+}
+
+.pokemon-selection-container {
+  height: 100%;
+  font-family: pokemonGB;
+  width: 100%;
+}
+
+.pokedex-screen-container {
+  position: relative;
+  height: 60%;
+  width: 60%;
+  max-height: 60%;
+  margin-left: 10%;
+  margin-top: 33%;
+  margin-bottom: 33%;
+
+}
+
+.pokemon-grid-container  {
+  overflow-y: scroll;
+  height: 80%;
+  max-height: 700px;
+}
+
+.pokemon-generation-filter {
   display: inline-block;
+  width: 40%;
+}
+
+select  {
+  font: inherit;
+  height: 25px;
+}
+
+.pokemon-search-clear-button {
+  height: 25px;
+  display: inline-block;
+}
+
+input {
+  height: 20px;
+}
+
+.pokemon-generation-select {
+  padding: 5px;
 }

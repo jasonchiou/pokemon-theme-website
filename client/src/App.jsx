@@ -44,6 +44,9 @@ class App extends React.Component {
   setUserPokemon(pokemon) {
     this.setState({userPokemon: pokemon})
     let pokemonString = JSON.stringify(pokemon)
+    if (localStorage.getItem('userPokemon')) {
+
+    }
     localStorage.setItem("userPokemon", pokemonString)
     this.addToPokedex(pokemon)
   }
@@ -57,13 +60,14 @@ class App extends React.Component {
         let capitalized = pokemonData[i]['name'].charAt(0).toUpperCase() + pokemonData[i]['name'].slice(1);
         pokemonData[i]['name'] = capitalized;
         if (i < 152) {
-          pokemonData['generation'] = 1;
-        } else if (i > 252) {
-          pokemonData['generation'] = 2;
-        } else if (i > 387){
-          pokemonData['generation'] = 3;
+          pokemonData[i]['generation'] = '1';
+        } else if (i < 252) {
+          pokemonData[i]['generation'] = '2';
+        } else if (i < 387){
+          pokemonData[i]['generation'] = '3';
         }
       }
+      console.log(pokemonData);
       this.updatePokemonState(pokemonData);
     })
     .catch((err) => {
@@ -92,6 +96,10 @@ class App extends React.Component {
     })
   }
 
+  replacePokemonInPokedex(pokemon) {
+
+  }
+
 
   showState() {
     console.log(this.state)
@@ -101,14 +109,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-         {/* <button onClick = {this.showState.bind(this)}>Show State</button> */}
-         <div className = 'pokedex-background'>
-          <div className = 'pokedex-screen'>
-            <PokemonSelection allPokemon = {this.state.allPokemon} setUserPokemon = {this.setUserPokemon} userPokemon = {this.state.userPokemon}/>
-            <Pokedex pokedex = {this.state.pokedex}/>
-          </div>
+        {/* <button onClick = {() => console.log(this.state)}>Show state</button> */}
+        <div className = 'master-container'>
+        <div className = 'pokemon-selection-container'>
+        <PokemonSelection
+            allPokemon = {this.state.allPokemon}
+            setUserPokemon = {this.setUserPokemon}
+            userPokemon = {this.state.userPokemon}
+          />
+          <Pokedex pokedex = {this.state.pokedex}/>
         </div>
-      </div>
+        </div>
+        </div>
     );
   }
 
