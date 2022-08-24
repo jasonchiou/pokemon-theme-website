@@ -64,7 +64,7 @@ class PokemonModal extends React.Component {
 
 
   fetchPokemonInfo (){
-    console.log(`fetching ${this.props.pokemon.name.toLowerCase()}'s info`)
+    console.log(`fetching! ${this.props.pokemon.name.toLowerCase()}'s info`)
     let path = `https://pokeapi.co/api/v2/pokemon/${this.props.pokemon.name.toLowerCase()}`
     axios.get(path)
     .then((response) => {
